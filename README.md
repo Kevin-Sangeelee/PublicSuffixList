@@ -68,3 +68,7 @@ match any entry from the Public Suffix List, then the first part of the domain
 is returned. If the string cannot be parsed as a valid domain, the function
 returns the empty string.
 
+#### Building
+This repository is stored as an Eclipse project (Oxygen.3a Rel. 4.7.3a), and
+includes a POM file if you want to build with Maven. However, there are only
+a couple of files and no dependencies, so `javac` and `zip` would easily suffice!
