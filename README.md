@@ -52,7 +52,7 @@ their ccSLDs, each of which can contain further ccSLDs, and so on.
 Using a tree allows us to store and search the list of ~9000 entries quickly
 when processing large numbers of URLs.
 
-The API to check a URL for is: -
+The API to check the host/domain part of a URL is: -
 ```
     // public_suffix_list.dat comes from https://publicsuffix.org/
     
