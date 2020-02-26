@@ -57,11 +57,11 @@ The API to check the host/domain part of a URL is: -
     // public_suffix_list.dat comes from https://publicsuffix.org/
     
     String filename = "public_suffix_list.dat";
-    
+
     PublicSuffixList psl = new PublicSuffixList(filename);
-	String etld = psl.getETLD("www.example.co.uk");
-	
-	// etld is "co.uk"
+    String etld = psl.getETLD("www.example.co.uk");
+
+    // etld is "co.uk"
 ```	
 Returns the substring that should be considered the TLD. If the domain does not
 match any entry from the Public Suffix List, then the first part of the domain
