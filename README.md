@@ -54,8 +54,9 @@ when processing large numbers of URLs.
 
 The API to check the host/domain part of a URL is: -
 ```
-    // public_suffix_list.dat comes from https://publicsuffix.org/
+    import net.susa.cfs.psl.PublicSuffixList;
     
+    // public_suffix_list.dat comes from https://publicsuffix.org/
     String filename = "public_suffix_list.dat";
 
     PublicSuffixList psl = new PublicSuffixList(filename);
