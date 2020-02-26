@@ -10,7 +10,8 @@ Public Suffix List Helper
 
 The Public Suffix List is a register of domain suffixes that are used in
 combination to provide effective Top Level Domains for certain actual Top
-Level Domains.
+Level Domains. It can be found at https://publicsuffix.org/ and on GitHub
+https://github.com/publicsuffix/list
 
 For example, the TLD .uk has a number of second-level domains that are for most
 purposes considered part of the TLD. Therefore, .co.uk, .ac.uk, .org.uk can all
@@ -52,9 +53,16 @@ Using a tree allows us to store and search the list of ~9000 entries quickly
 when processing large numbers of URLs.
 
 The API to check a URL for is: -
-
-	String getETLD(String fqdn)
+```
+    // public_suffix_list.dat comes from https://publicsuffix.org/
+    
+    String filename = "public_suffix_list.dat";
+    
+    PublicSuffixList psl = new PublicSuffixList(filename);
+	String etld = psl.getETLD("www.example.co.uk");
 	
+	// etld is "co.uk"
+```	
 Returns the substring that should be considered the TLD. If the domain does not
 match any entry from the Public Suffix List, then the first part of the domain
 is returned. If the string cannot be parsed as a valid domain, the function
